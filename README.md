@@ -34,5 +34,5 @@ cd your-repository
 
 ## Deploy
 
-Project deployed on GitHub Pages.
-**[Take a look](https://hlebushark.github.io/task4/)**
+Project deployed on Netlify.
+**[Take a look](https://prismatic-cucurucho-b150c9.netlify.app/)**
