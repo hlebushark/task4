@@ -4,7 +4,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from '../lib/queryClient'
-import { Home, FileText} from 'lucide-react'
+import { Home, FileText, MessageSquare, Database } from 'lucide-react'
 
 export const App: React.FC = () => {
   return (
@@ -34,6 +34,24 @@ export const App: React.FC = () => {
                 >
                   <FileText size={20} />
                   <span>Posts</span>
+                </Link>
+
+                <Link
+                  to="/chat"
+                  className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+                  activeProps={{ className: 'text-blue-600 font-semibold' }}
+                >
+                  <MessageSquare size={20} />
+                  <span>Chat</span>
+                </Link>
+
+                <Link
+                  to="/graphql"
+                  className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+                  activeProps={{ className: 'text-blue-600 font-semibold' }}
+                >
+                  <Database size={20} />
+                  <span>GraphQL</span>
                 </Link>
               </div>
             </div>

@@ -2,6 +2,8 @@ import { createRouter, createRoute, createRootRoute } from '@tanstack/react-rout
 import { App } from '../routes/__root'
 import IndexPage from '../routes/index'
 import CreatePostPage from '../routes/posts/create'
+import ChatPage from '../features/chat/index'
+import GraphQLPage from '../features/graphql/index'
 
 // Import route components
 import { PostsRoute } from '../routes/posts/index'
@@ -16,6 +18,18 @@ const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
   component: IndexPage,
+})
+
+const chatRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/chat',
+  component: ChatPage,
+})
+
+const graphqlRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/graphql',
+  component: GraphQLPage,
 })
 
 const postsRoute = createRoute({
@@ -44,6 +58,8 @@ const createPostRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
+  chatRoute,
+  graphqlRoute,
   postsRoute.addChildren([
     postsIndexRoute,
     postDetailRoute,
