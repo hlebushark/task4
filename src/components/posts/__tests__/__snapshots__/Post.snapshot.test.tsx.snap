@@ -1,0 +1,1143 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Post snapshots > matches collapsed post snapshot 1`] = `
+<div
+  class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+>
+  <div
+    class="p-6"
+  >
+    <div
+      class="flex items-center justify-between mb-4"
+    >
+      <div
+        class="flex items-center space-x-3"
+      >
+        <div
+          class="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold"
+        >
+          user1
+        </div>
+        <div>
+          <div
+            class="font-semibold text-gray-900 hover:text-blue-600 cursor-pointer"
+          >
+            user1
+          </div>
+          <div
+            class="flex items-center space-x-2 text-sm text-gray-500"
+          >
+            <span>
+              Post #
+              1
+            </span>
+          </div>
+        </div>
+      </div>
+      <button
+        class="text-gray-400 hover:text-gray-600"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-ellipsis-vertical"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="1"
+          />
+          <circle
+            cx="12"
+            cy="5"
+            r="1"
+          />
+          <circle
+            cx="12"
+            cy="19"
+            r="1"
+          />
+        </svg>
+      </button>
+    </div>
+    <a
+      href="#"
+    >
+      <h3
+        class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+      >
+        Snapshot Test Post
+      </h3>
+    </a>
+    <div
+      class="mb-4"
+    >
+      <p
+        class="text-gray-700 line-clamp-3"
+      >
+        This is a snapshot test post body. This is a snapshot test post body. This is a snapshot test post body. This is a snapshot test post body. This is a ...
+      </p>
+      <button
+        class="mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center"
+      >
+        Read more
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-chevron-down ml-1"
+          fill="none"
+          height="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m6 9 6 6 6-6"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="flex flex-wrap gap-2 mb-4"
+    >
+      <span
+        class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-50 text-blue-700 hover:bg-blue-100 cursor-pointer"
+      >
+        #
+        snapshot
+      </span>
+      <span
+        class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-50 text-blue-700 hover:bg-blue-100 cursor-pointer"
+      >
+        #
+        testing
+      </span>
+    </div>
+    <div
+      class="flex items-center justify-between text-sm text-gray-500 mb-4"
+    >
+      <div
+        class="flex items-center space-x-4"
+      >
+        <div
+          class="flex items-center space-x-1"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-thumbs-up"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 10v12"
+            />
+            <path
+              d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"
+            />
+          </svg>
+          <span>
+            15
+             likes
+          </span>
+        </div>
+        <div
+          class="flex items-center space-x-1"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-thumbs-down"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 14V2"
+            />
+            <path
+              d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"
+            />
+          </svg>
+          <span>
+            3
+             dislikes
+          </span>
+        </div>
+        <div>
+          <span>
+            24
+             comments
+          </span>
+        </div>
+      </div>
+      <a
+        href="#"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-external-link mr-1"
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 3h6v6"
+          />
+          <path
+            d="M10 14 21 3"
+          />
+          <path
+            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+          />
+        </svg>
+        Full post
+      </a>
+    </div>
+    <div
+      class="border-t border-gray-100 pt-4"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-heart"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+              />
+            </svg>
+            <span>
+              Like
+            </span>
+          </button>
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-thumbs-down"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 14V2"
+              />
+              <path
+                d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"
+              />
+            </svg>
+            <span>
+              Dislike
+            </span>
+          </button>
+        </div>
+        <div
+          class="flex items-center space-x-2"
+        >
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-message-circle"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+              />
+            </svg>
+            <span>
+              Comment
+            </span>
+          </button>
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-share2 lucide-share-2"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="18"
+                cy="5"
+                r="3"
+              />
+              <circle
+                cx="6"
+                cy="12"
+                r="3"
+              />
+              <circle
+                cx="18"
+                cy="19"
+                r="3"
+              />
+              <line
+                x1="8.59"
+                x2="15.42"
+                y1="13.51"
+                y2="17.49"
+              />
+              <line
+                x1="15.41"
+                x2="8.59"
+                y1="6.51"
+                y2="10.49"
+              />
+            </svg>
+            <span>
+              Share
+            </span>
+          </button>
+          <button
+            class="p-2 rounded-lg text-gray-400 hover:text-gray-600"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-bookmark"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Post snapshots > matches post with many reactions snapshot 1`] = `
+<div
+  class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+>
+  <div
+    class="p-6"
+  >
+    <div
+      class="flex items-center justify-between mb-4"
+    >
+      <div
+        class="flex items-center space-x-3"
+      >
+        <div
+          class="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold"
+        >
+          user1
+        </div>
+        <div>
+          <div
+            class="font-semibold text-gray-900 hover:text-blue-600 cursor-pointer"
+          >
+            user1
+          </div>
+          <div
+            class="flex items-center space-x-2 text-sm text-gray-500"
+          >
+            <span>
+              Post #
+              1
+            </span>
+          </div>
+        </div>
+      </div>
+      <button
+        class="text-gray-400 hover:text-gray-600"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-ellipsis-vertical"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="1"
+          />
+          <circle
+            cx="12"
+            cy="5"
+            r="1"
+          />
+          <circle
+            cx="12"
+            cy="19"
+            r="1"
+          />
+        </svg>
+      </button>
+    </div>
+    <a
+      href="#"
+    >
+      <h3
+        class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+      >
+        Snapshot Test Post
+      </h3>
+    </a>
+    <div
+      class="mb-4"
+    >
+      <p
+        class="text-gray-700 line-clamp-3"
+      >
+        This is a snapshot test post body. This is a snapshot test post body. This is a snapshot test post body. This is a snapshot test post body. This is a ...
+      </p>
+      <button
+        class="mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center"
+      >
+        Read more
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-chevron-down ml-1"
+          fill="none"
+          height="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m6 9 6 6 6-6"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="flex flex-wrap gap-2 mb-4"
+    >
+      <span
+        class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-50 text-blue-700 hover:bg-blue-100 cursor-pointer"
+      >
+        #
+        snapshot
+      </span>
+      <span
+        class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-50 text-blue-700 hover:bg-blue-100 cursor-pointer"
+      >
+        #
+        testing
+      </span>
+    </div>
+    <div
+      class="flex items-center justify-between text-sm text-gray-500 mb-4"
+    >
+      <div
+        class="flex items-center space-x-4"
+      >
+        <div
+          class="flex items-center space-x-1"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-thumbs-up"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 10v12"
+            />
+            <path
+              d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"
+            />
+          </svg>
+          <span>
+            999
+             likes
+          </span>
+        </div>
+        <div
+          class="flex items-center space-x-1"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-thumbs-down"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 14V2"
+            />
+            <path
+              d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"
+            />
+          </svg>
+          <span>
+            10
+             dislikes
+          </span>
+        </div>
+        <div>
+          <span>
+            46
+             comments
+          </span>
+        </div>
+      </div>
+      <a
+        href="#"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-external-link mr-1"
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 3h6v6"
+          />
+          <path
+            d="M10 14 21 3"
+          />
+          <path
+            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+          />
+        </svg>
+        Full post
+      </a>
+    </div>
+    <div
+      class="border-t border-gray-100 pt-4"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-heart"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+              />
+            </svg>
+            <span>
+              Like
+            </span>
+          </button>
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-thumbs-down"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 14V2"
+              />
+              <path
+                d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"
+              />
+            </svg>
+            <span>
+              Dislike
+            </span>
+          </button>
+        </div>
+        <div
+          class="flex items-center space-x-2"
+        >
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-message-circle"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+              />
+            </svg>
+            <span>
+              Comment
+            </span>
+          </button>
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-share2 lucide-share-2"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="18"
+                cy="5"
+                r="3"
+              />
+              <circle
+                cx="6"
+                cy="12"
+                r="3"
+              />
+              <circle
+                cx="18"
+                cy="19"
+                r="3"
+              />
+              <line
+                x1="8.59"
+                x2="15.42"
+                y1="13.51"
+                y2="17.49"
+              />
+              <line
+                x1="15.41"
+                x2="8.59"
+                y1="6.51"
+                y2="10.49"
+              />
+            </svg>
+            <span>
+              Share
+            </span>
+          </button>
+          <button
+            class="p-2 rounded-lg text-gray-400 hover:text-gray-600"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-bookmark"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Post snapshots > matches post without tags snapshot 1`] = `
+<div
+  class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+>
+  <div
+    class="p-6"
+  >
+    <div
+      class="flex items-center justify-between mb-4"
+    >
+      <div
+        class="flex items-center space-x-3"
+      >
+        <div
+          class="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold"
+        >
+          user1
+        </div>
+        <div>
+          <div
+            class="font-semibold text-gray-900 hover:text-blue-600 cursor-pointer"
+          >
+            user1
+          </div>
+          <div
+            class="flex items-center space-x-2 text-sm text-gray-500"
+          >
+            <span>
+              Post #
+              1
+            </span>
+          </div>
+        </div>
+      </div>
+      <button
+        class="text-gray-400 hover:text-gray-600"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-ellipsis-vertical"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="1"
+          />
+          <circle
+            cx="12"
+            cy="5"
+            r="1"
+          />
+          <circle
+            cx="12"
+            cy="19"
+            r="1"
+          />
+        </svg>
+      </button>
+    </div>
+    <a
+      href="#"
+    >
+      <h3
+        class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+      >
+        Snapshot Test Post
+      </h3>
+    </a>
+    <div
+      class="mb-4"
+    >
+      <p
+        class="text-gray-700 line-clamp-3"
+      >
+        This is a snapshot test post body. This is a snapshot test post body. This is a snapshot test post body. This is a snapshot test post body. This is a ...
+      </p>
+      <button
+        class="mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center"
+      >
+        Read more
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-chevron-down ml-1"
+          fill="none"
+          height="16"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m6 9 6 6 6-6"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="flex items-center justify-between text-sm text-gray-500 mb-4"
+    >
+      <div
+        class="flex items-center space-x-4"
+      >
+        <div
+          class="flex items-center space-x-1"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-thumbs-up"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 10v12"
+            />
+            <path
+              d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"
+            />
+          </svg>
+          <span>
+            15
+             likes
+          </span>
+        </div>
+        <div
+          class="flex items-center space-x-1"
+        >
+          <svg
+            aria-hidden="true"
+            class="lucide lucide-thumbs-down"
+            fill="none"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 14V2"
+            />
+            <path
+              d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"
+            />
+          </svg>
+          <span>
+            3
+             dislikes
+          </span>
+        </div>
+        <div>
+          <span>
+            15
+             comments
+          </span>
+        </div>
+      </div>
+      <a
+        href="#"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-external-link mr-1"
+          fill="none"
+          height="14"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 3h6v6"
+          />
+          <path
+            d="M10 14 21 3"
+          />
+          <path
+            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+          />
+        </svg>
+        Full post
+      </a>
+    </div>
+    <div
+      class="border-t border-gray-100 pt-4"
+    >
+      <div
+        class="flex items-center justify-between"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-heart"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+              />
+            </svg>
+            <span>
+              Like
+            </span>
+          </button>
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-thumbs-down"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 14V2"
+              />
+              <path
+                d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"
+              />
+            </svg>
+            <span>
+              Dislike
+            </span>
+          </button>
+        </div>
+        <div
+          class="flex items-center space-x-2"
+        >
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-message-circle"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+              />
+            </svg>
+            <span>
+              Comment
+            </span>
+          </button>
+          <button
+            class="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-share2 lucide-share-2"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="18"
+                cy="5"
+                r="3"
+              />
+              <circle
+                cx="6"
+                cy="12"
+                r="3"
+              />
+              <circle
+                cx="18"
+                cy="19"
+                r="3"
+              />
+              <line
+                x1="8.59"
+                x2="15.42"
+                y1="13.51"
+                y2="17.49"
+              />
+              <line
+                x1="15.41"
+                x2="8.59"
+                y1="6.51"
+                y2="10.49"
+              />
+            </svg>
+            <span>
+              Share
+            </span>
+          </button>
+          <button
+            class="p-2 rounded-lg text-gray-400 hover:text-gray-600"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-bookmark"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
