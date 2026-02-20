@@ -25,8 +25,11 @@ export const PostDetailRoute: React.FC = () => {
   }
 
   const handleEdit = () => {
-    navigate({ to: '/posts/create', search: { editId: postId } })
-  }
+  navigate({ 
+    to: '/posts/create', 
+    search: { editId: postId } 
+  })
+}
 
   if (isLoading) return <Loader />
   if (error) return (

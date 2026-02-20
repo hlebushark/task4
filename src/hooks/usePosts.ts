@@ -4,7 +4,7 @@ import type { CreatePostRequest, UpdatePostRequest } from '../api/types'
 
 const POSTS_QUERY_KEY = 'posts'
 
-export const usePosts = (limit: number = 9, skip: number = 0) => {
+export const usePosts = (limit: number = 50, skip: number = 0) => {
   return useQuery({
     queryKey: [POSTS_QUERY_KEY, limit, skip],
     queryFn: () => postsApi.getAll(limit, skip),
@@ -33,7 +33,6 @@ export const useCreatePost = () => {
             : [],
         reactions: data.reactions || { likes: 0, dislikes: 0 }
       }
-      
       return postsApi.create(normalizedData)
     },
     onSuccess: () => {
@@ -42,14 +41,24 @@ export const useCreatePost = () => {
   })
 }
 
-export const useUpdatePost = (id: number) => {
+export const useUpdatePost = () => {
   const queryClient = useQueryClient()
   
   return useMutation({
-    mutationFn: (data: UpdatePostRequest) => postsApi.update(id, data),
+    mutationFn: ({ id, data }: { id: number; data: UpdatePostRequest }) => {
+      const normalizedData = {
+        ...data,
+        tags: Array.isArray(data.tags) 
+          ? data.tags 
+          : typeof data.tags === 'string'
+            ? data.tags.split(',').map(tag => tag.trim()).filter(Boolean)
+            : [],
+      }
+      return postsApi.update(id, normalizedData)
+    },
     onSuccess: (updatedPost) => {
-      queryClient.setQueryData([POSTS_QUERY_KEY, id], updatedPost)
       queryClient.invalidateQueries({ queryKey: [POSTS_QUERY_KEY] })
+      queryClient.setQueryData([POSTS_QUERY_KEY, updatedPost.id], updatedPost)
     },
   })
 }

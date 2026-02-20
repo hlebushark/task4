@@ -1,27 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
-import { useCreatePost } from '../../hooks/usePosts'
-import { useNavigate } from '@tanstack/react-router'
-import { ArrowLeft, Save } from 'lucide-react'
-import type { CreatePostRequest } from '../../api/types'
-
-// Интерфейс для формы (tags как строка)
+import { useCreatePost, useUpdatePost, usePost } from '../../hooks/usePosts'
+import { useNavigate, useSearch } from '@tanstack/react-router'
+import { ArrowLeft, Save, Edit3 } from 'lucide-react'
 interface CreatePostFormData {
   title: string
   body: string
   userId: number
-  tags: string  // в форме это строка
-  reactions?: { likes: number; dislikes: number }
+  tags: string
 }
 
 const CreatePostPage: React.FC = () => {
   const navigate = useNavigate()
+  
+  const search: { editId?: string } = useSearch({ from: '/posts/create' })
+  const editId = search.editId ? parseInt(search.editId) : undefined
+  
+  const { data: existingPost, isLoading: isLoadingPost } = usePost(editId || 0)
+  
   const createPost = useCreatePost()
+  const updatePost = useUpdatePost()
+  
+  const isEditMode = !!editId && !!existingPost
   
   const {
     register,
     handleSubmit,
     formState: { errors },
+    setValue
   } = useForm<CreatePostFormData>({
     defaultValues: {
       title: '',
@@ -31,10 +37,18 @@ const CreatePostPage: React.FC = () => {
     },
   })
 
+  useEffect(() => {
+    if (existingPost) {
+      setValue('title', existingPost.title)
+      setValue('body', existingPost.body)
+      setValue('userId', existingPost.userId)
+      setValue('tags', existingPost.tags?.join(', ') || '')
+    }
+  }, [existingPost, setValue])
+
   const onSubmit = async (formData: CreatePostFormData) => {
     try {
-      // Преобразуем данные для API
-      const apiData: CreatePostRequest = {
+      const apiData = {
         title: formData.title,
         body: formData.body,
         userId: formData.userId,
@@ -45,26 +59,70 @@ const CreatePostPage: React.FC = () => {
         reactions: { likes: 0, dislikes: 0 }
       }
       
-      await createPost.mutateAsync(apiData)
-      navigate({ to: '/posts' })
+      if (isEditMode && editId) {
+        await updatePost.mutateAsync({ 
+          id: editId, 
+          data: apiData 
+        })
+        navigate({ to: `/posts/${editId}` })
+      } else {
+        await createPost.mutateAsync(apiData)
+        navigate({ to: '/posts' })
+      }
     } catch (error) {
-      console.error('Failed to create post:', error)
-      alert('Failed to create post. Please try again.')
+      console.error('Failed to save post:', error)
+      alert('Failed to save post. Please try again.')
     }
+  }
+
+  const handleCancel = () => {
+    if (isEditMode && editId) {
+      navigate({ to: `/posts/${editId}` })
+    } else {
+      navigate({ to: '/posts' })
+    }
+  }
+
+  if (isEditMode && isLoadingPost) {
+    return (
+      <div className="flex justify-center items-center min-h-100">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      </div>
+    )
   }
 
   return (
     <div className="max-w-2xl mx-auto">
       <button
-        onClick={() => navigate({ to: '/posts' })}
+        onClick={handleCancel}
         className="flex items-center gap-2 text-gray-600 hover:text-blue-600 mb-8"
       >
         <ArrowLeft size={20} />
-        <span>Back to Posts</span>
+        <span>Back to {isEditMode ? 'Post' : 'Posts'}</span>
       </button>
 
       <div className="bg-white rounded-xl shadow-lg p-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">Create New Post</h1>
+        <div className="flex items-center gap-3 mb-6">
+          {isEditMode ? (
+            <>
+              <Edit3 className="w-8 h-8 text-blue-600" />
+              <h1 className="text-3xl font-bold text-gray-900">Edit Post</h1>
+            </>
+          ) : (
+            <>
+              <Save className="w-8 h-8 text-blue-600" />
+              <h1 className="text-3xl font-bold text-gray-900">Create New Post</h1>
+            </>
+          )}
+        </div>
+
+        {isEditMode && (
+          <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <p className="text-sm text-blue-800">
+              You are editing post #{editId}. Changes will be saved when you submit.
+            </p>
+          </div>
+        )}
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div>
@@ -155,16 +213,21 @@ const CreatePostPage: React.FC = () => {
           <div className="flex gap-4 pt-4">
             <button
               type="submit"
-              disabled={createPost.isPending}
+              disabled={createPost.isPending || updatePost.isPending}
               className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
             >
               <Save size={20} />
-              {createPost.isPending ? 'Creating...' : 'Create Post'}
+              {createPost.isPending || updatePost.isPending 
+                ? 'Saving...' 
+                : isEditMode 
+                  ? 'Update Post' 
+                  : 'Create Post'
+              }
             </button>
             
             <button
               type="button"
-              onClick={() => navigate({ to: '/posts' })}
+              onClick={handleCancel}
               className="px-6 py-3 border border-gray-300 rounded-lg font-semibold text-gray-700 hover:bg-gray-50 transition"
             >
               Cancel

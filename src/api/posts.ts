@@ -2,7 +2,7 @@ import { apiClient } from './client'
 import type { Post, PostsResponse, CreatePostRequest, UpdatePostRequest } from './types'
 
 export const postsApi = {
-  getAll: (limit: number = 10, skip: number = 0): Promise<PostsResponse> => {
+  getAll: (limit: number = 50, skip: number = 0): Promise<PostsResponse> => {
     return apiClient.get<PostsResponse>(`/posts?limit=${limit}&skip=${skip}`)
   },
 

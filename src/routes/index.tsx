@@ -27,8 +27,10 @@ const HomePage: React.FC = () => {
           >
             View All Posts
           </Link>
+
           <Link
             to="/posts/create"
+            search={{}} 
             className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10"
           >
             Create New Post

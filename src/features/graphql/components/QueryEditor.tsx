@@ -15,7 +15,6 @@ export const QueryEditor: React.FC<QueryEditorProps> = ({
   const [result, setResult] = useState<any>(null)
   const [executionError, setExecutionError] = useState<string | null>(null)
 
-  // Обновляем состояние при изменении initialQuery/initialVariables
   useEffect(() => {
     if (initialQuery) {
       setQuery(initialQuery)
@@ -25,7 +24,6 @@ export const QueryEditor: React.FC<QueryEditorProps> = ({
     }
   }, [initialQuery, initialVariables])
 
-  // Обновляем результат при изменении error из пропсов
   useEffect(() => {
     if (error) {
       setExecutionError(error)
