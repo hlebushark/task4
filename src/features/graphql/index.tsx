@@ -7,14 +7,26 @@ import { ArrowLeft, Database } from 'lucide-react'
 import type { QueryHistoryItem } from '../../api/graphql/types'
 
 const GraphQLPage: React.FC = () => {
-  const { history, isLoading, error, executeQuery, clearHistory, removeFromHistory } = useGraphQL()
+  const { 
+    history, 
+    isLoading, 
+    error, 
+    executeQuery, 
+    clearHistory, 
+    removeFromHistory 
+  } = useGraphQL()
+  
   const [selectedQuery, setSelectedQuery] = useState<QueryHistoryItem | null>(null)
 
   const handleExecuteQuery = async (query: string, variables?: Record<string, any>) => {
-    await executeQuery(query, variables)
+    console.log('Executing in page:', { query, variables })
+    const result = await executeQuery(query, variables)
+    console.log('Page received result:', result)
+    return result
   }
 
   const handleSelectQuery = (item: QueryHistoryItem) => {
+    console.log('Selected query from history:', item)
     setSelectedQuery(item)
   }
 
@@ -34,16 +46,16 @@ const GraphQLPage: React.FC = () => {
         <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 mb-6">
           <div className="flex items-start gap-3">
             <Database className="text-purple-600 shrink-0 mt-1" size={20} />
-            <p className="text-purple-700 text-sm">
-              Execute GraphQL queries against DummyJSON's posts endpoint.
-              Query history is stored locally in memory.
-            </p>
+              <p className="text-purple-700 text-sm">
+                Execute GraphQL queries against DummyJSON's posts.
+                Query history is stored locally in memory.
+              </p>
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Left col - edit query */}
+        {/* Left col - editor */}
         <div className="lg:col-span-2">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
             <QueryEditor
@@ -68,80 +80,6 @@ const GraphQLPage: React.FC = () => {
               onClearHistory={clearHistory}
               onRemoveQuery={removeFromHistory}
             />
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h3 className="font-semibold text-gray-800 mb-4">Available Queries</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="p-3 bg-gray-50 rounded-lg">
-            <div className="font-medium text-blue-600 mb-1">Get Posts</div>
-            <pre className="text-xs bg-white p-2 rounded">
-              {`query {
-  posts(limit: 10, skip: 0) {
-    posts {
-      id
-      title
-      body
-      tags
-    }
-    total
-  }
-}`}
-            </pre>
-          </div>
-          
-          <div className="p-3 bg-gray-50 rounded-lg">
-            <div className="font-medium text-green-600 mb-1">Get Post by ID</div>
-            <pre className="text-xs bg-white p-2 rounded">
-              {`query {
-  post(id: 1) {
-    id
-    title
-    body
-    reactions {
-      likes
-      dislikes
-    }
-  }
-}`}
-            </pre>
-          </div>
-          
-          <div className="p-3 bg-gray-50 rounded-lg">
-            <div className="font-medium text-purple-600 mb-1">Get Users</div>
-            <pre className="text-xs bg-white p-2 rounded">
-              {`query {
-  users(limit: 5) {
-    users {
-      id
-      firstName
-      lastName
-      email
-    }
-    total
-  }
-}`}
-            </pre>
-          </div>
-          
-          <div className="p-3 bg-gray-50 rounded-lg">
-            <div className="font-medium text-orange-600 mb-1">Get Comments</div>
-            <pre className="text-xs bg-white p-2 rounded">
-              {`query {
-  comments(postId: 1) {
-    comments {
-      id
-      body
-      user {
-        username
-      }
-    }
-    total
-  }
-}`}
-            </pre>
           </div>
         </div>
       </div>

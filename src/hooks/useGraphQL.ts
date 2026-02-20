@@ -6,6 +6,7 @@ export const useGraphQL = () => {
   const [history, setHistory] = useState<QueryHistoryItem[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [lastResult, setLastResult] = useState<any>(null)
 
   const executeQuery = useCallback(async <T = any>(
     query: string,
@@ -13,13 +14,19 @@ export const useGraphQL = () => {
   ): Promise<T | null> => {
     setIsLoading(true)
     setError(null)
+    setLastResult(null)
 
     try {
+      console.log('Executing query:', { query, variables })
       const data = await graphqlClient.request<T>(query, variables)
+      console.log('Query result:', data)
+      
       setHistory(graphqlClient.getHistory())
+      setLastResult(data)
       return data
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'GraphQL request failed'
+      console.error('Query error:', errorMessage)
       setError(errorMessage)
       setHistory(graphqlClient.getHistory())
       return null
@@ -41,6 +48,7 @@ export const useGraphQL = () => {
     history,
     isLoading,
     error,
+    lastResult,
     executeQuery,
     clearHistory,
     removeFromHistory

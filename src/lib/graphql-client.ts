@@ -1,16 +1,31 @@
-import { GraphQLClient } from 'graphql-request'
+import { postsApi } from '../api/posts'
 import type { QueryHistoryItem } from '../api/graphql/types'
 
-const GRAPHQL_ENDPOINT = 'https://dummyjson.com/posts/'
+async function executeGraphQLQuery(query: string, variables?: Record<string, any>) {
+  console.log('Processing query:', { query, variables })
+
+  if (query.includes('posts') && !query.includes('post(')) {
+    const limit = variables?.limit || 10
+    const skip = variables?.skip || 0
+    return await postsApi.getAll(limit, skip)
+  }
+  
+  if (query.includes('post(') || query.includes('post {')) {
+    const id = variables?.id || 1
+    return await postsApi.getById(id)
+  }
+  
+  if (query.includes('searchPosts')) {
+    const q = variables?.q || ''
+    return await postsApi.search(q)
+  }
+
+  throw new Error('Unsupported query')
+}
 
 export class GraphQLClientWithHistory {
-  private client: GraphQLClient
   private history: QueryHistoryItem[] = []
   private maxHistorySize = 50
-
-  constructor() {
-    this.client = new GraphQLClient(GRAPHQL_ENDPOINT)
-  }
 
   async request<T = any>(
     query: string,
@@ -20,10 +35,12 @@ export class GraphQLClientWithHistory {
     const id = Math.random().toString(36).substring(7)
     
     try {
-      const data = await this.client.request<T>(query, variables)
+      console.log('Executing GraphQL query:', { query, variables })
+      
+      const data = await executeGraphQLQuery(query, variables)
       const duration = Date.now() - startTime
 
-      this.addToHistory({
+      const historyItem: QueryHistoryItem = {
         id,
         query,
         variables,
@@ -31,22 +48,29 @@ export class GraphQLClientWithHistory {
         duration,
         status: 'success',
         data
-      })
+      }
 
-      return data
+      this.addToHistory(historyItem)
+      return data as T
     } catch (error) {
       const duration = Date.now() - startTime
+      
+      let errorMessage = 'Unknown error'
+      if (error instanceof Error) {
+        errorMessage = error.message
+      }
 
-      this.addToHistory({
+      const historyItem: QueryHistoryItem = {
         id,
         query,
         variables,
         timestamp: new Date(),
         duration,
         status: 'error',
-        error: error instanceof Error ? error.message : 'Unknown error'
-      })
+        error: errorMessage
+      }
 
+      this.addToHistory(historyItem)
       throw error
     }
   }

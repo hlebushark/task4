@@ -8,7 +8,7 @@ export interface QueryHistoryProps {
 }
 
 export interface QueryEditorProps {
-  onExecuteQuery: (query: string, variables?: Record<string, any>) => Promise<void>
+  onExecuteQuery: (query: string, variables?: Record<string, any>) => Promise<any>
   isLoading: boolean
   error: string | null
   initialQuery?: string

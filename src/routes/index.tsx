@@ -35,6 +35,27 @@ const HomePage: React.FC = () => {
           </Link>
         </div>
       </section>
+      
+      <section className="text-center text-blue-600 mt-20 pb-20">
+        <h3 className="text-3xl font-bold mb-4">Extra</h3>
+        <p className="mb-6 text-blue-400">
+          WebSocket chat and GraphQL explorer.
+        </p>
+        <div className="flex gap-4 justify-center">
+          <Link
+            to="/chat"
+            className="bg-transparent border-2 border-blue-500 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/10"
+          >
+            Chat
+          </Link>
+          <Link
+            to="/graphql"
+            className="bg-transparent border-2 border-blue-500 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/10"
+          >
+            GraphQL
+          </Link>
+        </div>
+      </section>
     </div>
   )
 }
