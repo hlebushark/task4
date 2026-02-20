@@ -36,3 +36,9 @@ cd your-repository
 
 Project deployed on Netlify.
 **[Take a look](https://prismatic-cucurucho-b150c9.netlify.app/)**
+
+## Testing
+
+- **Unit** for api/posts.ts & hook/usePosts.ts
+- **Module** for components/posts/Post.tsx & components/ui/Button
+- **Snapshot** for components/posts/Post.tsx & components/ui/Button
